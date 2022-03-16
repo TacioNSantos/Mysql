@@ -1,5 +1,5 @@
-create database a_mercado;
-use a_mercado;
+create database mercado;
+use mercado;
 -- EQUIPE: Tácio, Maria Julia, Lara, Otavio, Suelison. 3 TI- B
 
 create table produtos (
@@ -135,8 +135,9 @@ qtd int not null
 create view Vw_Inventario as
 select cod_prod, nome_prod, qtd from produtos
 
-/*View 2 - Funcionários agrupados pelo sexo */
-
+/*View 2 - Mostrar a tabela PBackupOnInsert */
+create view vw_tbinsert as
+SELECT cod_prod, nome_prod, validade, cod_marca ,qtd from PBackupOnInsert
 
 
 /* View 3 - Funcionarios agrupados por cargo do maior para o menor*/
